@@ -1,0 +1,3 @@
+class BestIphoneOffer::Scraper 
+  
+end
