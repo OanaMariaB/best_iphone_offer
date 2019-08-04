@@ -5,8 +5,9 @@ class BestIphoneOffer::Scraper
   end
   
   def self.scrape_offers
-    handset = get_page.css('div#filterResults').css('span.handset').text.gsub("Apple", "").split("iPhone")
+    handset = get_page.css('div#filterResults').css('span.handset').text.gsub("Apple","").split("iPhone")
+    handset.shift
     handset.each_with_index {|h, i| puts "#{i+1}. iPhone #{h}"}
-  end
+   end
 
 end #off the class
