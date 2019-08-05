@@ -14,6 +14,11 @@ class BestIphoneOffer::CLI
   
   def offer_details
     puts "Please select from the list which offer are you interested in?"
+    input = gets.strip if valid_input?
+  end
+  
+  def valid_input?
+    
   end
     
   
