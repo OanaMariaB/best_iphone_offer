@@ -12,7 +12,7 @@ class BestIphoneOffer::Scraper
   
   def self.scrape_key_info
     contract_details = get_page.css('div.contract price').each do |details|
-    #offer = Offer.new
+    #offer = BestIphoneOffer::Offer.new
     #offer.handset = 
     offer
     binding.pry
