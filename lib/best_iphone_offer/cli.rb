@@ -13,9 +13,9 @@ class BestIphoneOffer::CLI
   end
   
   def offer_details
-    #puts "Please select from the list which offer are you interested in?"
-    #input = gets.strip #if valid_input?
-     BestIphoneOffer::Scraper.scrape_key_info
+   puts "Please select from the list which offer are you interested in?"
+   input = gets.strip #if valid_input?
+    BestIphoneOffer::Scraper.scrape_contract
   end
   
   #def valid_input?

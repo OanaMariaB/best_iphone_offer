@@ -10,12 +10,14 @@ class BestIphoneOffer::Scraper
     handset.each_with_index {|h, i| puts "#{i+1}. iPhone #{h}"}
   end
   
-  def self.scrape_key_info
-    contract_details = get_page.css('div.contract price').each do |details|
-    #offer = BestIphoneOffer::Offer.new
-    #offer.handset = 
-    offer
-    binding.pry
+  def self.scrape_contract
+    contract_details = get_page.css('div.contract.price').collect do |contract|
+    offer = BestIphoneOffer::Offer.new
+    #offer.handset = contract.css('span.normal').text
+    offer.upfront_cost = contract.css('span.normal').text
+    offer.price = contract.css('div.contract.cost.mx-auto.mx-sm-0').text
+    offer.contract_length = 
    end
+  end
 
 end #off the class
