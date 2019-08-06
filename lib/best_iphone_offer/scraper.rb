@@ -15,11 +15,9 @@ class BestIphoneOffer::Scraper
     contract_details.each do |contract_details|
   
     offer = BestIphoneOffer::Offer.new
-    offer.name = contract_details.css('span.normal').text
-    offer.upfront_cost = contract_details.css('span.normal').text #need to gsub from
+    offer.upfront_cost = contract_details.css('span.normal').text 
     offer.price = contract_details.css('div.contract.cost.mx-auto.mx-sm-0').text
     offer.contract_length = contract_details.css('div.length').text
-    binding.pry
     end
   end
 
