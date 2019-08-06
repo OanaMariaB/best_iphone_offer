@@ -1,10 +1,10 @@
 class BestIphoneOffer::Offer 
-  attr_accessor :handset, :upfront_cost, :price, :contract_length
+  attr_accessor :name, :upfront_cost, :price, :contract_length
   
   @@all = []
   
   def initialize(name, upfront_cost, price, contract_lenght)
-    @handset = handset
+    @name = name
     @upfront_cost = upfront_cost
     @price = price
     @contract_lenght = contract_lenght

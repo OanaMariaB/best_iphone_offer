@@ -13,7 +13,7 @@ class BestIphoneOffer::Scraper
   def self.scrape_contract
     contract_details = get_page.css('div.contract.price').collect do |contract|
     offer = BestIphoneOffer::Offer.new
-    #offer.handset = contract.css('span.normal').text
+    #offer.name = contract.css('span.normal').text
     offer.upfront_cost = contract.css('span.normal').text
     offer.price = contract.css('div.contract.cost.mx-auto.mx-sm-0').text
     offer.contract_length = 
