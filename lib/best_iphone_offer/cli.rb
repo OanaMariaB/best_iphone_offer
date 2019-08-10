@@ -11,22 +11,25 @@ class BestIphoneOffer::CLI
   end
   
   def offer_details
-   puts "Please select from the list which offer are you interested in? Otherwise, please type exit"
+   puts "Please select from the list which offer are you interested in?"
+   puts "Otherwise, please type exit."
    
-   input = ''
-   if input != "exit" && valid_input?
-    BestIphoneOffer::Scraper.scrape_contract
-    puts "here based on the user input we list the offer details"
-  end
-  
-  def valid_input?
    input = gets.strip.to_i - 1
-    until input.between?(0, BestIphoneOffer::Scraper.scrape_offers.size - 1)
-     puts "Sorry, please enter a number between 1 and #{BestIphoneOffer::Scraper.scrape_offers.size - 1}"
-    end
-  end
+     if input != "exit" && input.between?(0, BestIphoneOffer::Scraper.scrape_offers.size - 1)
+   BestIphoneOffer::Scraper.scrape_contract
+     puts "here based on the user input we list the offer details"
+    elsif
+     puts "Please enter a number between 1 and #{BestIphoneOffer::Scraper.scrape_offers.size} "
+    elsif
+     input == "exit"
+     goodbye
+   end
+   
+  end #end of offer_details
   
- 
+ def goodbye
+   puts "Thank you for checking Best iPhone Offers!"
+ end
     
   
 end #of class
