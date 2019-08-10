@@ -4,13 +4,13 @@ class BestIphoneOffer::CLI
     puts "Welcome! Here are the best iPhone offers at the moment:"
     BestIphoneOffer::Scraper.scrape_offers
      list_offer
-     offer_details
   end 
     
   def list_offer
      BestIphoneOffer::Offer.all.each.with_index(1) do |handset, idx|
        puts "#{idx} #{handset.name}"
      end
+     offer_details
   end
   
   def offer_details
@@ -19,12 +19,12 @@ class BestIphoneOffer::CLI
    
    input = gets.strip
      if input != "exit" && (input.to_i-1).between?(0, BestIphoneOffer::Offer.all.size - 1)
-     puts " here put the upfront cost, price and contract lenght for the user selection "
-    elsif
-     puts "Please enter a number between 1 and #{BestIphoneOffer::Offer.all.size} "
-    elsif
-     input == "exit"
-     goodbye
+        puts " here put the upfront cost, price and contract lenght for the user selection "
+     elsif input == "exit"
+       goodbye
+    else
+       puts "Please enter a number between 1 and #{BestIphoneOffer::Offer.all.size} "
+     list_offer
    end
    
   end #end of offer_details
