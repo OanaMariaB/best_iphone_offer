@@ -15,11 +15,8 @@ class BestIphoneOffer::Scraper
       price = handset.css('div.contract.cost.mx-auto.mx-sm-0').text
       contract_length = handset.css('div.length').text
       BestIphoneOffer::Offer.new(name, upfront_cost, price, contract_length)
-      binding.pry
     end
     
-    
-    #handset.each_with_index {|h, i| puts "#{i+1}. iPhone #{h}"}
   end
   
  
