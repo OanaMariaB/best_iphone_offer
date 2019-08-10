@@ -17,7 +17,7 @@ class BestIphoneOffer::CLI
    input = gets.strip.to_i - 1
      if input != "exit" && input.between?(0, BestIphoneOffer::Scraper.scrape_offers.size - 1)
    BestIphoneOffer::Scraper.scrape_contract
-     puts "here based on the user input we list the offer details"
+     puts " here put the upfront cost, price and contract lenght for the user selection "
     elsif
      puts "Please enter a number between 1 and #{BestIphoneOffer::Scraper.scrape_offers.size} "
     elsif

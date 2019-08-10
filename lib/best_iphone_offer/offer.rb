@@ -3,7 +3,7 @@ class BestIphoneOffer::Offer
   
   @@all = []
   
-  def initialize
+  def initialize(name, upfront_cost, price, contract_length)
     @name = name
     @upfront_cost = upfront_cost
     @price = price
