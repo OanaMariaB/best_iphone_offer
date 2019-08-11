@@ -6,8 +6,6 @@ class BestIphoneOffer::Scraper
   
   def self.scrape_offers
     handset = get_page.css('div#filterResults div.deal-box')
-    #.css('span.handset').text.gsub("Apple","").split("iPhone")
-    #handset.shift
     
     handset.each do |handset|
       name = handset.css('span.handset').text.gsub("Apple","").strip
