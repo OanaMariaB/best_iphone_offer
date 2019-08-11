@@ -7,7 +7,7 @@ class BestIphoneOffer::Offer
     @name = name
     @upfront_cost = upfront_cost
     @price = price
-    @contract_lenght = contract_length
+    @contract_length = contract_length
     save
   end
   

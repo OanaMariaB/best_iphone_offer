@@ -9,7 +9,7 @@ class BestIphoneOffer::Scraper
     
     handset.each do |handset|
       name = handset.css('span.handset').text.gsub("Apple","").strip
-      upfront_cost = handset.css('span.normal').text 
+      upfront_cost = handset.css('span.normal').text.downcase.gsub("from", "contract")
       price = handset.css('div.contract.cost.mx-auto.mx-sm-0').text
       contract_length = handset.css('div.length').text
       BestIphoneOffer::Offer.new(name, upfront_cost, price, contract_length)

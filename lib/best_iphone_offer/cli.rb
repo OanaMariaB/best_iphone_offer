@@ -22,7 +22,7 @@ class BestIphoneOffer::CLI
 	   puts ""
 	     if input != "exit" && (input.to_i-1).between?(0, BestIphoneOffer::Offer.all.size - 1)
 	      offer = BestIphoneOffer::Offer.find(input)
-	      puts "For the #{offer.name} you will pay #{offer.price} #{offer.contract_length} with #{offer.upfront_cost}" 
+	      puts "For the #{offer.name} you will have a #{offer.upfront_cost} at #{offer.price} #{offer.contract_length}." 
 	     elsif input == "exit"
 	       goodbye
 	     elsif input == "list"
