@@ -33,19 +33,20 @@ class BestIphoneOffer::CLI
 	        puts "\nPlease enter a number between 1 and #{BestIphoneOffer::Offer.all.size} \n"
 	     menu
 	     end
-	   end #end of menu
-	   
-	 def show_offer
-	   
-	 end
+	   end 
 	  
 	 def goodbye
 	   puts "\nThank you for checking Best iPhone Offers!\n"
+	  puts "
+          .:'
+      __ :'__
+   .'`__`-'__``.
+  :__________.-'
+  :_________:
+   :_________`-;
+    `.__.-.__.'
+    "
 	 end
-	 
-  
-
-	  
-	end #of class
+	end 
 
   
