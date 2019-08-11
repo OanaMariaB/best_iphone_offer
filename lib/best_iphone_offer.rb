@@ -2,7 +2,7 @@ require_relative "./best_iphone_offer/version"
 require_relative "./best_iphone_offer/cli"
 require_relative "./best_iphone_offer/offer"
 require_relative "./best_iphone_offer/scraper"
-require_relative "./best_iphone_offer/phone"
+
 
  require 'nokogiri'
  require 'open-uri'
