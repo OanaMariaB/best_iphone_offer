@@ -23,6 +23,7 @@ class BestIphoneOffer::CLI
 	     if input != "exit" && (input.to_i-1).between?(0, BestIphoneOffer::Offer.all.size - 1)
 	      offer = BestIphoneOffer::Offer.find(input)
 	      puts "For the #{offer.name} you will have a #{offer.upfront_cost} at #{offer.price} #{offer.contract_length}." 
+	      menu
 	     elsif input == "exit"
 	       goodbye
 	     elsif input == "list"
