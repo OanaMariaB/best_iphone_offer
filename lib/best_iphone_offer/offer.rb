@@ -15,6 +15,10 @@ class BestIphoneOffer::Offer
     @@all
   end
   
+  def self.find(input)
+    self.all[input.to_i - 1]
+  end
+  
   def save
     @@all << self
   end
