@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{Best iPhone Offer CLI Project}
   spec.description   = %q{Best iPhone Offer CLI Project}
-  spec.homepage      = "http://www.bioffers.com"
+  spec.homepage      = "https://github.com/OanaMariaB/best_iphone_offer"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
@@ -20,8 +20,8 @@ Gem::Specification.new do |spec|
     spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
 
     spec.metadata["homepage_uri"] = spec.homepage
-    spec.metadata["source_code_uri"] = "http://www.bioffers.com"
-    spec.metadata["changelog_uri"] = "http://www.bioffers.com"
+    spec.metadata["source_code_uri"] = "https://github.com/OanaMariaB/best_iphone_offer"
+    spec.metadata["changelog_uri"] = "https://github.com/OanaMariaB/best_iphone_offer"
   else
     raise "RubyGems 2.0 or newer is required to protect against " \
       "public gem pushes."
