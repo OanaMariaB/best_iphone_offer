@@ -20,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+To use the BestIphoneOffer gem after either installing it or cloning it, make sure you're in the correct file by typing 'cd best_iphone_offer' into your terminal. Next, run the program by typing './bin/best_iphone_offern' into your terminal. Follow the prompt by typing in the number of the offer you wish to learn more about. 
 
 ## Development
 
